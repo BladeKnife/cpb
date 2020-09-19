@@ -1,3 +1,7 @@
+#Creator:Fahmiapz
+#Date:19/09/2020
+#time:23:00
+#Recode Teros Boss Tinggal Pake Apa Susahnya Anjeng
 import requests,re,os,sys,time,json,random,urllib,mechanize
 from requests.exceptions import ConnectionError
 from time import sleep as timeout
